@@ -40,23 +40,18 @@ def Subnetting(ip, num, className, ip_addresses):
         place2 = ip_addresses / 256
         for i in range(num):
             print(f"\nSubnet {i} => ")
-            print("Subnet Address : ", ".".join(
-                ip[0:2]) + '.' + str(temp) + '.0')
+            print("Subnet Address : ", ".".join(ip[0:2]) + '.' + str(temp) + '.0')
             temp += int(place2)
-            print("Broadcast address : ", ".".join(
-                ip[0:2]) + '.' + str(temp - 1) + '.255')
-            print("Valid range of host IP address : ", ".".join(ip[0:2]) + '.' + str(
-                temp - int(place2)) + '.1\t-\t' + ".".join(ip[0:2]) + '.' + str(temp - 1) + '.254')
+            print("Broadcast address : ", ".".join(ip[0:2]) + '.' + str(temp - 1) + '.255')
+            print("Valid range of host IP address : ", ".".join(ip[0:2]) + '.' + str(temp - int(place2)) + '.1\t-\t' + ".".join(ip[0:2]) + '.' + str(temp - 1) + '.254')
             print()
     elif className == "C":
         for i in range(num):
             print(f"\nSubnet {i} => ")
             print("Subnet Address : ", ".".join(ip[0:3]) + '.' + str(temp))
             temp += int(ip_addresses)
-            print("Broadcast address : ", ".".join(
-                ip[0:3]) + '.' + str(temp - 1))
-            print("Valid range of host IP address : ", ".".join(ip[0:3]) + '.' + str(
-                temp - int(ip_addresses) + 1) + '\t-\t' + ".".join(ip[0:3]) + '.' + str(temp - 2))
+            print("Broadcast address : ", ".".join(ip[0:3]) + '.' + str(temp - 1))
+            print("Valid range of host IP address : ", ".".join(ip[0:3]) + '.' + str(temp - int(ip_addresses) + 1) + '\t-\t' + ".".join(ip[0:3]) + '.' + str(temp - 2))
             print()
     else:
         print("In this Class, IP address is not divided into Network and Host ID")
