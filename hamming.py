@@ -27,7 +27,9 @@ def calcParityBits(arr, r):
 				val = val ^ int(arr[-1 * j])
 		arr = arr[:n-(2**i)] + str(val) + arr[n-(2**i)+1:]
 	return arr
-
+# 1011
+# 1010101  r=3
+# 1  0  1  0  1  0  0
 
 def detectError(arr, nr):
 	n = len(arr)
