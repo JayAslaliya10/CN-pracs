@@ -1,0 +1,43 @@
+>enable
+>conf t
+>do show vlan
+>vlan 10
+>name  COMPS
+>exit
+>vlan 20
+>name  IT
+>exit
+>vlan 30
+>name  EXTC
+>exit
+>do show vlan
+>int fa0/1
+>switchport access vlan 10
+>exit
+>int fa0/2
+>switchport access vlan 10
+>exit
+>int fa0/3
+>switchport access vlan 10
+>exit
+>int fa0/9
+>switchport access vlan 20
+>exit
+>int fa0/10
+>switchport access vlan 20
+>exit
+>int fa0/11
+>switchport access vlan 20
+>exit
+>int fa0/17
+>switchport access vlan 30
+>exit
+>int fa0/18
+>switchport access vlan 30
+>exit
+>int fa0/19
+>switchport access vlan 30
+>exit
+>do show vlan
+
+DONE
