@@ -22,17 +22,16 @@ def mod2div(dividend, divisor):
             tmp = xor('0'*pick, tmp) + dividend[pick]
 
         pick += 1
+        
     if tmp[0] == '1':
         tmp = xor(divisor, tmp)
     else:
         tmp = xor('0'*pick, tmp)
 
-    checkword = tmp
-    return checkword
-
+    remainder = tmp
+    return remainder
 
 def encodeData(data, divisor):
-
     l_divisor = len(divisor)
     appended_data = data + '0'*(l_divisor-1)
     remainder = mod2div(appended_data, divisor)
@@ -44,3 +43,10 @@ def encodeData(data, divisor):
 data = input("Enter the data : ")
 divisor = input("Enter the divisor : ")
 encodeData(data, divisor)
+
+data2 = input("Enter the recieved data : ")
+rem = mod2div(data2,divisor)
+if(int(rem)==0):
+    print("There is no error in recieved data")
+else:
+    print("There is error in recieved data")
